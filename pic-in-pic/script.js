@@ -16,12 +16,16 @@ async function selectMediaStream() {
 }
 
 button.addEventListener('click', async () => {
-  // Disable Button
-  button.disabled = true;
-  // Start Picture in Picture
-  await videoElement.requestPictureInPicture();
-  // Reset Button
-  button.disabled = false;
+  try {
+    // Disable Button
+    button.disabled = true;
+    // Start Picture in Picture
+    await videoElement.requestPictureInPicture();
+    // Reset Button
+    button.disabled = false;
+  } catch (error) {
+    alert('Seems like there is a problem here: ' + error.message);
+  }
 });
 
 // On Load
