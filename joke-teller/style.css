@@ -7,7 +7,6 @@ html {
 body {
   margin: 0;
   background: #45badd;
-  min-height: 100vh;
 }
 
 .container {
@@ -17,8 +16,48 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('https://raw.githubusercontent.com/JacintoDesign/joke-teller/master/robot.gif');
+  background: url('./robot.gif');
   background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
 }
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  background: #ff3482;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 991px) {
+  .container {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+} ;
