@@ -110,13 +110,18 @@ var VoiceRSS = {
   },
 };
 
+//Disable/Enable Button
+function toggleButton() {
+  button.disabled = !button.disabled;
+}
+
 // Passing Joke to VoiceRSS API
 function tellMe(joke) {
   VoiceRSS.speech({
-    key: '09e768ee5f034d7cb847738e38eec3ce',
+    key: '<API KEY>',
     src: joke,
-    hl: 'en-us',
-    v: 'Linda',
+    hl: 'en-gb',
+    v: 'Alice',
     r: 0,
     c: 'mp3',
     f: '44khz_16bit_stereo',
@@ -138,11 +143,16 @@ async function getJokes() {
     } else {
       joke = data.joke;
     }
+    // Text-To-Speech
     tellMe(joke);
+    // Disable Button
+    toggleButton();
   } catch (error) {
     //Catch errors here
     alert('whoops ' + error.message);
   }
 }
 
+// Event Listeners
 button.addEventListener('click', getJokes);
+audioElement.addEventListener('ended', toggleButton);
