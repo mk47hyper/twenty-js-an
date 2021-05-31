@@ -26,11 +26,6 @@ function toggleNav() {
     // Animate In - Overlay
     overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
     // Animate In - Nav Items
-    nav1.classList.replace('slide-out-1', 'slide-in-1');
-    nav2.classList.replace('slide-out-2', 'slide-in-2');
-    nav3.classList.replace('slide-out-3', 'slide-in-3');
-    nav3.classList.replace('slide-out-4', 'slide-in-4');
-    nav3.classList.replace('slide-out-5', 'slide-in-5');
     navAnimation('out', 'in');
   } else {
     // Animate Out - Overlay
