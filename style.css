@@ -22,11 +22,90 @@ body {
   width: 400px;
   background-color: #e7e7e7;
   border-radius: 22px;
-  box-shadow: 0 16px 42px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 42px 6px rgba(0, 0, 0, 0.3);
 }
 
 .img-container {
+  height: 300px;
+  width: 300px;
   position: relative;
   top: -50px;
   left: 50px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 8px 42px 6px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 26px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .player-container {
+    width: 90vw;
+  }
+
+  /* .img-container {
+    left: 29px;
+  } */
+
+  .img-container {
+    height: 240px;
+    width: 240px;
+    position: relative;
+    top: -50px;
+    left: 50px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
 }
