@@ -16,3 +16,17 @@ body {
   font-family: Spartan, sans-serif;
   font-size: 12px;
 }
+
+.player-container {
+  height: 500px;
+  width: 400px;
+  background-color: #e7e7e7;
+  border-radius: 22px;
+  box-shadow: 0 16px 42px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-container {
+  position: relative;
+  top: -50px;
+  left: 50px;
+}
